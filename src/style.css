@@ -1,1 +1,29 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.box-radio {
+  background-color: #6c757d;
+  margin-right: 40%;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.accept {
+  padding-bottom: 5%;
+}
+
+.box-radio input {
+  margin-left: 10px;
+}
+
+.card {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
