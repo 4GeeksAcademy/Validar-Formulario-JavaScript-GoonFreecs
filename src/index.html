@@ -22,12 +22,15 @@
   </head>
 
   <body>
-    <form>
+    <form id="registerForm">
       <div class="card mt-5 ">
         <div class="card-header bg-primary-subtle border border-primary-subtle">
           <h1>Payment form example</h1>
         </div>
         <div class="card-body">
+          <div id="globalError" class="alert alert-danger d-none" role="alert">
+            Some fields are missing
+          </div>
           <div class="card-header1">
             <div class=" row form-group">
               <div class="col-12 col-md-4">
@@ -38,6 +41,9 @@
                   id="cardNumber"
                   placeholder="xxxxxxxxxx"
                 />
+                <small class="invalid-feedback"
+                  >The Card Number Is Required</small
+                >
               </div>
               <div class="col-12 col-md-4">
                 <label for="cvc">CVC #</label> <br />
@@ -47,6 +53,7 @@
                   id="cvc"
                   placeholder="00000"
                 />
+                <small class="invalid-feedback">The CVC Is Required</small>
               </div>
               <div class="col-12 col-md-4">
                 <label for="amount">Amount</label> <br />
@@ -60,6 +67,7 @@
                     id="amount"
                     placeholder="Amount"
                   />
+                  <small class="invalid-feedback">The Amount Is Required</small>
                 </div>
               </div>
             </div>
@@ -69,10 +77,12 @@
             <div class="col-12 col-md-6">
               <label for="firstname">First Name</label> <br />
               <input type="text" class="form-control" id="firstName" />
+              <small class="invalid-feedback">The First Name Is Required</small>
             </div>
             <div class="col-12 col-md-6">
               <label for="lastname">Last Name</label> <br />
               <input type="text" class="form-control" id="lastname" />
+              <small class="invalid-feedback">The Last Name Is Required</small>
             </div>
           </div>
 
@@ -80,6 +90,7 @@
             <div class="col-12 col-md-4 mb-3 mb-md-0">
               <label for="city">City</label>
               <input type="text" class="form-control" id="city" />
+              <small class="invalid-feedback">The City Is Required</small>
             </div>
             <div class="col-12 col-md-4 mb-3 mb-md-0">
               <label for="state">State</label>
@@ -102,10 +113,14 @@
                 <option value="15">Región de Aysén</option>
                 <option value="16">Región de Magallanes</option>
               </select>
+              <small class="invalid-feedback">The state Is Required</small>
             </div>
             <div class="col-12 col-md-4">
               <label form="Postal-code">Postal Code</label>
               <input type="text" class="form-control" id="Postal-code" />
+              <small class="invalid-feedback"
+                >The Postal Code Is Required</small
+              >
             </div>
           </div>
 
@@ -131,6 +146,7 @@
               <label for="massage">Message</label> <br />
               <textarea id="message" class="form-control" rows="4"></textarea>
               <p>Add any notes here.</p>
+              <small class="invalid-feedback">The Massage Is Required</small>
             </div>
           </div>
 
@@ -139,11 +155,14 @@
               <button class="btn btn-secondary me-md-2" type="button">
                 Cancel
               </button>
-              <button class="btn btn-primary" type="submit">Send</button>
+              <button class="btn btn-primary" type="submit" id="btnRegister">
+                Send
+              </button>
             </div>
           </div>
         </div>
       </div>
     </form>
+    <script src="./app.js"></script>
   </body>
 </html>
